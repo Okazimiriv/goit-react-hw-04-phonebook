@@ -146,7 +146,7 @@ const ContactForm = ({ onAddContact }) => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      <Form autoComplete="off">
+      <Form autoComplete="on">
         <FormLabel>Name</FormLabel>
         <FormField
           type="text"
