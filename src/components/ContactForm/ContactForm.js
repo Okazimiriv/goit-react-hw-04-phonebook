@@ -40,9 +40,6 @@ const schema = yup.object().shape({
 });
 
 const ContactForm = ({ onAddContact }) => {
-  // const [name, setName] = useState('name', '');
-  // const [number, setNumber] = useState('number', '');
-
   const nameInputId = shortId.generate();
   const numberInputId = shortId.generate();
 
