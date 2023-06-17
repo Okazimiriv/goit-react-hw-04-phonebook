@@ -1,4 +1,4 @@
-// import useLocalStorage from 'hooks/useLocaStorage';
+import useLocalStorage from 'hooks/useLocaStorage';
 import { useState, useEffect } from 'react';
 
 import shortId from 'shortid';
@@ -13,9 +13,10 @@ import initialContacts from '../src/contacts.json';
 const CONTACTS_KEY = 'contacts';
 
 function App() {
-  const [contacts, setContacts] = useState(() =>
-    JSON.parse(localStorage.getItem(CONTACTS_KEY) ?? initialContacts)
-  );
+  // const [contacts, setContacts] = useState(() =>
+  //   JSON.parse(localStorage.getItem(CONTACTS_KEY) ?? initialContacts)
+  // );
+  const [contacts, setContacts] = useLocalStorage('contacts', initialContacts);
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
